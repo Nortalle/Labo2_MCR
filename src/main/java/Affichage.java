@@ -1,6 +1,11 @@
 import java.awt.*;
 
+/**
+ * class representing the display that implement a singleton and
+ * implement the Displayer interface
+ */
 public class Affichage implements Displayer {
+
     private static Affichage ourInstance = new Affichage();
 
     public static Affichage getInstance() {
