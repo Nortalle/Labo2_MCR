@@ -1,26 +1,33 @@
+import javax.swing.*;
 import java.awt.*;
 
 /**
  * class representing the display that implement a singleton and
  * implement the Displayer interface
  */
-public class Affichage implements Displayer {
+class Affichage extends JFrame implements Displayer {
 
     private static Affichage ourInstance = new Affichage();
+    private static int width;
+    private static int height;
 
-    public static Affichage getInstance() {
-        return ourInstance;
-    }
 
     private Affichage() {
+        width = 500;
+        height = 500;
+
+        setTitle("Labo2 Singleton Samuel Mayor et Vincent Guidoux");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(getWidth(), getHeight());
+        setLocationRelativeTo(null);
     }
 
     public int getWidth() {
-        return 0;
+        return width;
     }
 
     public int getHeight() {
-        return 0;
+        return height;
     }
 
     public Graphics2D getGraphics() {
@@ -32,6 +39,10 @@ public class Affichage implements Displayer {
     }
 
     public void setTitle(String s) {
+        super.setTitle(s);
+    }
 
+    public static Affichage getInstance() {
+        return ourInstance;
     }
 }
