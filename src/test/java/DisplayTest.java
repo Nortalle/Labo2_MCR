@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-class AffichageTest {
+class DisplayTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {

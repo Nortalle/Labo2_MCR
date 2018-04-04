@@ -7,16 +7,6 @@ import java.awt.*;
 public interface Displayer {
 
     /**
-     * @return the width of the Displayer
-     */
-    int getWidth();
-
-    /**
-     * @return the height of the Displayer
-     */
-    int getHeight();
-
-    /**
      * @return the Graphics2D needed to draw some things
      */
     Graphics2D getGraphics();

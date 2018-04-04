@@ -5,28 +5,24 @@ import java.awt.*;
  * class representing the display that implement a singleton and
  * implement the Displayer interface
  */
-class Affichage extends JFrame implements Displayer {
+class Display implements Displayer {
 
-    private static Affichage ourInstance = new Affichage();
+    private static Display ourInstance = new Display();
     private static int width;
     private static int height;
+    private Container container;
 
-
-    private Affichage() {
+    private Display() {
         width = 500;
         height = 500;
-
-        setTitle("Labo2 Singleton Samuel Mayor et Vincent Guidoux");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(getWidth(), getHeight());
-        setLocationRelativeTo(null);
+        container = new Container();
     }
 
-    public int getWidth() {
+    public static int getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public static int getHeight() {
         return height;
     }
 
@@ -39,10 +35,10 @@ class Affichage extends JFrame implements Displayer {
     }
 
     public void setTitle(String s) {
-        super.setTitle(s);
+
     }
 
-    public static Affichage getInstance() {
+    public static Display getInstance() {
         return ourInstance;
     }
 }

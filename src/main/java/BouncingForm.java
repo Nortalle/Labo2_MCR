@@ -1,10 +1,32 @@
+import javax.swing.*;
 import java.awt.*;
 
 public abstract class BouncingForm {
 
     private int centerX;
     private int centerY;
+    private int size;
+    private int speedX;
+    private int speedY;
     private Color color;
+
+    public BouncingForm(int centerX, int centerY, int size, int speedX, int speedY, Color color) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.color = color;
+    }
+
+    public void move() {
+        centerX += speedX;
+        centerY += speedY;
+        if (centerX <= 0 || centerX >= Display.getInstance().getWidth())
+            speedX = -speedX;
+        if (centerY <= 0 || centerY >= Display.getInstance().getHeight())
+            speedY = -speedY;
+    }
 
     /**
      * @return the coordinate x of the center
@@ -38,6 +60,14 @@ public abstract class BouncingForm {
         this.centerY = centerY;
     }
 
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
     /**
      * @return the color of the bouncingForm
      */
@@ -53,4 +83,6 @@ public abstract class BouncingForm {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    abstract protected void paint(Graphics2D g2d);
 }
