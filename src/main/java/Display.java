@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
 
 /**
  * class representing the display that implement a singleton and
@@ -8,21 +9,19 @@ import java.awt.*;
 class Display implements Displayer {
 
     private static Display ourInstance = new Display();
-    private static int width;
-    private static int height;
-    private Container container;
+    private int width;
+    private int height;
 
     private Display() {
         width = 500;
         height = 500;
-        container = new Container();
     }
 
-    public static int getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public static int getHeight() {
+    public int getHeight() {
         return height;
     }
 
@@ -35,6 +34,10 @@ class Display implements Displayer {
     }
 
     public void setTitle(String s) {
+
+    }
+
+    public void addKeyListener(KeyAdapter ka) {
 
     }
 

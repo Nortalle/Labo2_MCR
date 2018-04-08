@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.KeyAdapter;
 
 /**
  * The class representing the display must implement a singleton and
@@ -6,20 +7,10 @@ import java.awt.*;
  */
 public interface Displayer {
 
-    /**
-     * @return the Graphics2D needed to draw some things
-     */
+    int getWidth();
+    int getHeight();
     Graphics2D getGraphics();
-
-    /**
-     *  it's called to repaint everything
-     */
     void repaint();
-
-    /**
-     * Set the title of the Displayer
-     *
-     * @param s : title to set
-     */
     void setTitle(String s);
+    void addKeyListener(KeyAdapter ka);
 }

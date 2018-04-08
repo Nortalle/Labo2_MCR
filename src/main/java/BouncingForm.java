@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class BouncingForm {
+public abstract class BouncingForm implements Bouncable, Renderable {
 
     private int centerX;
     private int centerY;
@@ -36,32 +36,10 @@ public abstract class BouncingForm {
     }
 
     /**
-     * sets the coordinate x of the center
-     *
-     * @param centerX : coordinate x of the center
-     */
-    public void setCenterX(int centerX) {
-        this.centerX = centerX;
-    }
-
-    /**
      * @return the coordinate x of the center
      */
     public int getCenterY() {
         return centerY;
-    }
-
-    /**
-     * sets the coordinate v of the center
-     *
-     * @param centerY : coordinate y of the center
-     */
-    public void setCenterY(int centerY) {
-        this.centerY = centerY;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 
     public int getSize() {
@@ -75,14 +53,22 @@ public abstract class BouncingForm {
         return color;
     }
 
-    /**
-     * sets the color of the bouncingForm
-     *
-     * @param color : color to set
-     */
-    public void setColor(Color color) {
-        this.color = color;
+    public Renderable getRenderer() {
+        return null;
     }
 
     abstract protected void paint(Graphics2D g2d);
+
+
+    public void display(Graphics2D g, Bouncable b) {
+
+    }
+
+    public void draw() {
+
+    }
+
+    public Shape getShape() {
+        return null;
+    }
 }

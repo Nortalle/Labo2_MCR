@@ -13,11 +13,11 @@ public class Container extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setSize(Display.getWidth(), Display.getHeight());
+        setSize(Display.getInstance().getWidth(), Display.getInstance().getHeight());
 
         setVisible(true);
 
-        new Thread(new BounceEngine(forms)).start();
+        new Thread(new BounceApp(forms)).start();
     }
 
     public static void main(String args[]){

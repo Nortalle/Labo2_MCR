@@ -5,7 +5,7 @@ public class Square extends BouncingForm {
     private static Random r = new Random();
 
     public Square() {
-        super(r.nextInt(Display.getWidth()), r.nextInt(Display.getHeight()), r.nextInt(30-10)+10, r.nextInt(10+10)-10, r.nextInt(10+10)-10, Color.yellow);
+        super(r.nextInt(Display.getInstance().getWidth()), r.nextInt(Display.getInstance().getHeight()), r.nextInt(30-10)+10, r.nextInt(10+10)-10, r.nextInt(10+10)-10, Color.yellow);
     }
 
     protected void paint(Graphics2D g2d) {
