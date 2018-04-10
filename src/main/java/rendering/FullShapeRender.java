@@ -1,4 +1,7 @@
-package shapes;
+package rendering;
+
+import shapes.Bouncable;
+import shapes.Renderable;
 
 import java.awt.*;
 

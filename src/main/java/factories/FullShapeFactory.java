@@ -1,7 +1,7 @@
 package factories;
 
 import shapes.Circle;
-import shapes.FullShapeRender;
+import rendering.FullShapeRender;
 import shapes.Square;
 
 import java.awt.*;

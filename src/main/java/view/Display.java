@@ -13,17 +13,14 @@ public class Display implements Displayer {
     private final int START_WIDTH = 600;
     private final int START_HEIGHT = 600;
 
-    private JPanel container;
-    private JFrame frame;
-    private BufferedImage graphics;
+    private JPanel container = new JPanel();
+    private JFrame frame = new JFrame();
+    private BufferedImage graphics = createImage();
 
     private static Display instance;
 
 
     private Display() {
-        container = new JPanel();
-        frame = new JFrame();
-        graphics = createImage();
         container.setPreferredSize(new Dimension(START_WIDTH, START_HEIGHT));
         frame.setSize(START_WIDTH, START_HEIGHT);
         frame.setResizable(true);
