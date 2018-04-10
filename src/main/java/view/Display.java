@@ -27,6 +27,7 @@ public class Display implements Displayer {
         container.setPreferredSize(new Dimension(START_WIDTH, START_HEIGHT));
         frame.setSize(START_WIDTH, START_HEIGHT);
         frame.setResizable(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.getContentPane().add(container, BorderLayout.CENTER);
         frame.setVisible(true);
     }
