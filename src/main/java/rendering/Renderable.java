@@ -11,7 +11,9 @@
  Java        : 1.8.0_161
  ------------------------------------------------------------------------------
 */
-package shapes;
+package rendering;
+
+import shapes.Bouncable;
 
 import java.awt.*;
 

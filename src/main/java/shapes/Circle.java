@@ -12,6 +12,8 @@
 */
 package shapes;
 
+import rendering.Renderable;
+
 import java.awt.geom.Ellipse2D;
 import java.awt.*;
 

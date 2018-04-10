@@ -13,6 +13,8 @@
 */
 package shapes;
 
+import rendering.Renderable;
+
 import java.awt.*;
 
 /**

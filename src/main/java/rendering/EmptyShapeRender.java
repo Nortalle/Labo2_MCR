@@ -13,7 +13,6 @@
 */
 package rendering;
 
-import shapes.Renderable;
 import shapes.Bouncable;
 
 import java.awt.*;

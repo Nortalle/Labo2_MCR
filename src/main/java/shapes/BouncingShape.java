@@ -13,6 +13,7 @@
 */
 package shapes;
 
+import rendering.Renderable;
 import view.Display;
 
 import java.awt.geom.RectangularShape;
