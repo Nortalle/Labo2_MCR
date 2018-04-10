@@ -10,22 +10,21 @@ import java.awt.image.BufferedImage;
  * implement the Displayer interface
  */
 public class Display implements Displayer {
-    private final int START_WIDTH = 600;
-    private final int START_HEIGHT = 600;
+    private final int DEFAULT_SIZE = 500;
 
     private JPanel container = new JPanel();
     private JFrame frame = new JFrame();
-    private BufferedImage graphics = createImage();
+    private BufferedImage graphics;
 
     private static Display instance;
 
 
     private Display() {
-        container.setPreferredSize(new Dimension(START_WIDTH, START_HEIGHT));
-        frame.setSize(START_WIDTH, START_HEIGHT);
+        graphics = createImage();
+        frame.setSize(DEFAULT_SIZE, DEFAULT_SIZE);
         frame.setResizable(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.getContentPane().add(container, BorderLayout.CENTER);
+        frame.setContentPane(container);
         frame.setVisible(true);
     }
 
